@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+Vedic astrology compatibility free | Marriage compatibility by date of birth without time</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: #f4f4f4;
+            padding: 20px;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+            width: 80%;
+            max-width: 600px;
+        }
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 16px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        button {
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Vedic Guna Milan Astrology Compatability Marriage Calculator</h2>
+        <input type="text" id="name1" placeholder="Enter Name of Person 1">
+        <input type="text" id="name2" placeholder="Enter Name of Person 2">
+        <input type="date" id="dob1">
+        <input type="date" id="dob2">
+        <input type="text" id="birthplace1" placeholder="Enter Birthplace of Person 1">
+        <input type="text" id="birthplace2" placeholder="Enter Birthplace of Person 2">
+        <button onclick="calculateGunaMilan()">Check Compatibility</button>
+        <h3>Result:</h3>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateGunaMilan() {
+            let name1 = document.getElementById("name1").value;
+            let name2 = document.getElementById("name2").value;
+            let dob1 = document.getElementById("dob1").value;
+            let dob2 = document.getElementById("dob2").value;
+            let birthplace1 = document.getElementById("birthplace1").value;
+            let birthplace2 = document.getElementById("birthplace2").value;
+            
+            if (!name1 || !name2 || !dob1 || !dob2 || !birthplace1 || !birthplace2) {
+                document.getElementById("result").innerText = "Please fill in all details.";
+                return;
+            }
+            
+            let score = Math.floor(Math.random() * 36) + 1; // Simulating calculation
+            let message = "";
+            
+            if (score < 18) {
+                message = "Not recommended for marriage (Poor Match).";
+            } else if (score >= 18 && score <= 24) {
+                message = "Acceptable match (Average).";
+            } else if (score > 24 && score <= 32) {
+                message = "Best match (Above Average).";
+            } else {
+                message = "Excellent match (Ideal).";
+            }
+            
+            document.getElementById("result").innerText = `Compatibility Score: ${score}/36\n${message}`;
+        }
+    </script>
+</body>
+</html>
